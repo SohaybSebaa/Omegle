@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>OmegaLol</title>
+        <link rel="stylesheet" href="static/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width, maximum-scale=1.0, minimal-ui">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script  src="{{ url_for('static', filename='js/location.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/varmobile.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/mobile.js') }}"></script>
+
+        
+    </head>
+    <body>
+        <div id="header">
+            <h1 id="logo">
+                <canvas width="293" height="171" style="position: absolute; width: 293px; height: 171px; margin-left: -57px; margin-top: -57px;"></canvas>
+                <img src="static/logo.png" width="236" height="57" alt="OmegaTv">
+            </h1>
+            <h2 id="tagline">
+                <img src="static/tagline.png" width="220" height="57" alt="Talk to strangers anonymously!">
+            </h2>
+            <div id="onlinecount">
+                <strong>90,000+</strong> 
+                 online now
+            </div>
+            
+            <script src="{{ url_for('static', filename='js/remove.js') }}"></script>
+        </div>
+        
+        <div id="intro">
+            <p id="mobilesitenote">
+                No app needed! Our chat site works smoothly on phones and tablets. 
+            </p>
+            <script>
+                /*if (IS_MOBILE) {
+                    $('#mobilesitenote').remove();
+                }*/
+            </script>
+            <div id="introtext">
+                <div style="float:right;margin-left: 1em;"><img src="static/monkey.png" alt="" width="287" height="150"></div>
+                <p>Bounga Bounga <i class="notranslate">(Chat is not monitored) </i>the mystical portal to encounter peculiar strangers. Dare to enter, and you'll be mysteriously matched with an unknown being for an eerie one-on-one exchange. Reveal your darkest interests, and you might just find yourself ensnared in a web of conversation with someone who craves the same eerie fascinations.</p>
+                <p>Lurk in the shadows of Bounga Bounga, where your identity stays hidden (unless you reveal it). End chats whenever fear takes over. Tread carefully as our Terms and Community Guidelines protect you, but video chat moderation has its limits. Users must face the consequences of their own spine-chilling actions.💀</p>
+            </div>
+            <script src="{{ url_for('static', filename='js/introtext.js') }}"></script>
+                    <div>
+                        <a href='peer_to_peer'><button id="gotoPeerToPeer" type="button" class="button">START!</button></a>
+                    </div>
+        </div>
+    </body>
+</html>
