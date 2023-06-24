@@ -3,7 +3,7 @@ from flask_socketio import SocketIO, send, join_room, leave_room, emit
 import random
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'hIoz1kXyStqtiGlgXu2hyx'
+app.config['SECRET_KEY'] = 'secret-key'
 socketio = SocketIO(app)
 
 names = ['Bou', 'Daa']
