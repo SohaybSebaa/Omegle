@@ -41,7 +41,7 @@
         
             <div class="chatbox">
                 <div class="logwrapper">
-                <div style="position: relative;min-height: 100%;height: 300px;overflow-y: auto;" class="chat-messages">
+                <div style="position: relative;min-height: 100%;height: 300px;overflow-y: auto;" class="chat-messages" id="textscroll">
                     <div id="sayhi" class="logitem">
                         <p class="statuslog">
                             SAY HI Don't be SHY!
@@ -51,7 +51,7 @@
                     <ul id="messages"></ul>
                     <script src="{{ url_for('static', filename='js/removesayhi.js') }}"></script>
                 </div>
-                <div>
+                <div id="chat-container" class="chat-container">
                     <form id="message-form">
                         <table class="controltable" cellpadding="0" cellspacing="0" border="0">
                             <tr>
@@ -79,11 +79,11 @@
                             </tr>
                         </table>
                     </form>
-
+                    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+                    <script src="{{ url_for('static', filename='js/autoscroll.js') }}"></script>
                     <script src="{{url_for('static', filename='js/hitenter.js')}}"></script>
                 </div>
             </div>
-        </form>
         <script src="{{url_for('static', filename='js/script.js')}}"></script>
     </div>
 

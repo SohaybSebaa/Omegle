@@ -10,13 +10,14 @@ $(() => {
 
     socket.on('assign_name', function(data) {
         document.querySelector('#username').innerHTML = 'Username: ' + data.username;
+
         });
+
 
     socket.on('chat', function (data) {
         document.querySelector('#messages').innerHTML += '<li>' + data.username + ': ' + data.message + '</li>';
+        autoScroll();
         });
-
-
 
     messageForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -33,19 +34,14 @@ $(() => {
             $('#message').val('');
             });
 
-        /*socket.on('receive_message', data => {
-        console.log('Message received:', data.message); // Add this line
-        $('#messages').append('<li>' + data.message + '</li>');
-        });*/
 
         socket.on('message', (msg) => {
         const chatMessage = document.createElement('p');
         chatMessage.textContent = msg;
         chatLog.appendChild(chatMessage);
+
         chatLog.scrollTop = chatLog.scrollHeight;
         });
 
 
-
   });
-
