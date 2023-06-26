@@ -74,7 +74,6 @@ def send_msg(data):
     socketio.emit('chat', {'username': username, 'message': message}, room=room)
 
 
-
 @socketio.on('message')
 def handle_message(msg):
     user_id = request.sid

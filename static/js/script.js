@@ -15,7 +15,7 @@ $(() => {
 
 
     socket.on('chat', function (data) {
-        document.querySelector('#messages').innerHTML += '<li>' + data.username + ': ' + data.message + '</li>';
+        document.querySelector('#messages').innerHTML += '<li><strong>' + data.username + ': </strong>' + data.message + '</li>';
         autoScroll();
         });
 
